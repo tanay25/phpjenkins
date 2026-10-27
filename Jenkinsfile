@@ -31,7 +31,7 @@ pipeline{
                 ])
                 {
                     sh '''
-                        echo "$DOCKER_PASS" | docekr login -u "$DOCKER_USER" --password-stdin
+                        echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
                         docekr push tanay25/${IMAGE_NAME}:latest
                     '''
                 }
